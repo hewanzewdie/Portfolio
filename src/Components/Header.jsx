@@ -1,6 +1,9 @@
 import { Sun, Moon, X, Menu } from "lucide-react";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
+import mainLogoL from "../assets/Main_Logo_1.png";
+import mainLogoD from "../assets/Main_Logo_2.png";
+
 
 Header.propTypes = {
   darkMode: PropTypes.bool.isRequired,
@@ -38,6 +41,13 @@ export default function Header({ darkMode, setDarkMode }) {
   const linkClass = `fs-5 text-decoration-none ${
     darkMode ? "bg-dark text-light" : "bg-light text-dark"
   }`;
+const cardClass = `card p-3 d-flex flex-column justify-content-center align-items-center h-100 ${
+  darkMode
+    ? "bg-dark text-light border border-light"
+    : "bg-light text-dark border border-dark"
+}`;
+
+const mainLogo = darkMode ? mainLogoD : mainLogoL;
 
   return (
     <>
@@ -45,8 +55,9 @@ export default function Header({ darkMode, setDarkMode }) {
         <header className={headerClass} style={{ position: "sticky", top: 0, zIndex: 1000 }}>
           <div className="container py-4">
             <nav className="d-flex align-items-center justify-content-between">
-              <h1 className="text-2xl fw-ligh text-primary"           
-              style={{fontFamily: "Lucida Handwriting"}}>Hewan</h1>
+              {/* <h1 className="text-2xl fw-ligh text-primary"           
+              style={{fontFamily: "Lucida Handwriting"}}>Hewan</h1> */}
+              <img src={mainLogo} alt="Main Logo" style={{ height: "50px" }} />
               <div className="d-flex gap-5 d-none d-md-flex">
                 {["home","about" ,"skills","projects", "contact"].map((id) => (
                   <a

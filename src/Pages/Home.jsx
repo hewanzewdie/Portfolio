@@ -5,7 +5,6 @@ import Contact from "../Components/Contact.jsx";
 import Projects from "../Components/Project.jsx"; 
 import { FaHtml5, FaCss3, FaBootstrap, FaJs, FaReact, FaJava, FaDatabase, FaPhp, FaFigma, FaGithub } from "react-icons/fa";
 
-
 const skills = [
   { title: "HTML", icon: <FaHtml5 /> },
   { title: "CSS", icon: <FaCss3 /> },

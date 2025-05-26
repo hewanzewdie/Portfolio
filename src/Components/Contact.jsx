@@ -3,6 +3,8 @@ import { motion, useInView } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { Mail, Phone } from "lucide-react";
+import emailjs from '@emailjs/browser';
+
 
 export default function Contact() {
   const ref = useRef(null);
@@ -30,9 +32,27 @@ export default function Contact() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  e.preventDefault();
+
+  emailjs
+    .send(
+      'service_3oocjdc',       // Replace with your EmailJS Service ID
+      'template_xghxb3j',      // Replace with your EmailJS Template ID
+      formData,
+      'jO1HWfE70jc7ad60D'        // Replace with your EmailJS Public Key
+    )
+    .then(
+      (result) => {
+        console.log('Email successfully sent!', result.text);
+        setSubmitted(true);
+      },
+      (error) => {
+        console.error('Failed to send email:', error);
+        setErrorMessage('Failed to send your message. Please try again.');
+      }
+    );
+};
+
 
   const handleBack = () => {
     setSubmitted(false);

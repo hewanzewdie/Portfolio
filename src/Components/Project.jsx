@@ -13,10 +13,24 @@ const projectsData = [
   },
   {
     id: 2,
+    title: "Calculator",
+    description: "A simple calculator made with HTML, CSS and Javascript that can perform simple mathematical operations.",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    link: "https://calculator-1616.netlify.app/"
+  },
+  {
+    id: 3,
     title: "Food Ordering System",
     description: "A C# project for placing and managing food orders in a restaurant.",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     link: "https://github.com/hewanzewdie/Food-ordering-system"
+  },
+  {
+    id: 4,
+    title: "Grocery Shopping System",
+    description: "A Java-based grocery shopping app that allows users to browse products, add items to a cart, and place orders.",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    link: "https://github.com/hewanzewdie/Grocery"
   }
 ];
 
