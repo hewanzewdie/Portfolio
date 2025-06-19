@@ -36,10 +36,10 @@ export default function Contact() {
 
   emailjs
     .send(
-      'service_3oocjdc',       // Replace with your EmailJS Service ID
-      'template_xghxb3j',      // Replace with your EmailJS Template ID
+      'service_3oocjdc',       
+      'template_xghxb3j',      
       formData,
-      'jO1HWfE70jc7ad60D'        // Replace with your EmailJS Public Key
+      'jO1HWfE70jc7ad60D'        
     )
     .then(
       (result) => {
